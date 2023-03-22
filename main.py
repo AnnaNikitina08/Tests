@@ -21,34 +21,29 @@ stats = {'facebook': 55,
          'google': 99,
          'email': 42,
          'ok': 98
-        }
+         }
 
-# def get_visit_Russia(geo_logs):   #Возвращает отфильтрованный список geo_logs, содержащий только визиты из России
-#     geo_logs_Rus = {}
-#     for geo_logs_Rus in geo_logs:
-#         for country in geo_logs_Rus.values():
-#             if country[1] == 'Россия':
-#                  print(geo_logs_Rus)
-#     return
 
-def get_visit_Russia(geo_logs):
-    geo_logs_Russia = []
+def get_visit_russia(geo_logs):
+    geo_logs_russia = []
     for elem in range(0, len(geo_logs)):
         if 'Россия' in list(geo_logs[elem].values())[0]:
-            geo_logs_Russia.append(geo_logs[elem])
-    return geo_logs_Russia
+            geo_logs_russia.append(geo_logs[elem])
+    return geo_logs_russia
 
-def get_unic_id(ids):   #Выводит на экран все уникальные гео-ID из значений словаря ids
+
+def get_unic_id(ids):  # Выводит на экран все уникальные гео-ID из значе ний словаря ids
     list_1 = []
     for key, value in ids.items():
         list_1 += value
     return list(set(list_1))
 
-def name_channal_max(stats):    #Возвращает название канала с максимальным объемом
+
+def name_channal_max(stats):    # Возвращает название канала с максимальным объемом
     res = max(stats, key=stats.get)
     return res
 
 
-get_visit_Russia(geo_logs)
+get_visit_russia(geo_logs)
 get_unic_id(ids)
 name_channal_max(stats)

@@ -5,6 +5,7 @@ from api_yandex import get_token_ya
 
 TOKEN = get_token_ya()
 
+
 class TestApiYa(unittest.TestCase):
     def test_create_folder(self):
         result = create_folder(TOKEN, "photo")
