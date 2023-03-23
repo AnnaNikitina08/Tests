@@ -33,4 +33,3 @@ def test_inique_value(ids, expected_res):
 def test_max_chanell(stats, expected_res):
     res = name_channal_max(stats)
     assert expected_res == res
-    
